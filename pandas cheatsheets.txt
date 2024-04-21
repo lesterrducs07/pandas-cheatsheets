@@ -1,12 +1,21 @@
-1375
-28628
-275
+PANDAS is a popular python library it used for data manipulation and analysis very useful for data structures and functions.
+It work well with tabular data --rows and columns. such as Excel, SQL databases, CSV files, JSON file, etc.
 
-1236
-25332
-247
+INSTALLATION
+to use Pandas Lib first need to install Pandas to your IDE by going to CMD or Powershell.
+type in-- pip install pandas. wait for it to download, when its successfully installed you can now use it to code.
 
-1375
-160
+IMPORT PANDA
+in the beginning of your code is where you usually put libraries such as pandas.
+type-- import pandas. this will activate pandas to your codebase.
+you can also use aliases by typing-- import pandas as pd. this means that you make "pd" the alias for pandas. by using alias
+you make your code simplier and neat.
 
-salesforce
+PANDAS CHEATSHEETS
+
+pd.Series(varname, index)
+this is use to initialize a rows or columns to the table you created 
+pd.read_excel("excel.slxs")
+pd.read_html("link_of_html", match= "")
+pd.read_csv
+pd.options.display.max_rows = 
