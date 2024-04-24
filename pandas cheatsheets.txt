@@ -13,9 +13,65 @@ you make your code simplier and neat.
 
 PANDAS CHEATSHEETS
 
-pd.Series(varname, index)
-this is use to initialize a rows or columns to the table you created 
-pd.read_excel("excel.slxs")
-pd.read_html("link_of_html", match= "")
-pd.read_csv
-pd.options.display.max_rows = 
+#INITIALIZE A SERIES- represent a row or column one dimensional
+pd.Series(varname, index= "column_name_optional")
+
+#INITIALIZE A DATAFRAME- represent both row and column and its tabular form. when initializing the row and column nos. should be the same
+pd.DataFrame(varname, columns= column_name)
+pd.DataFrame([varname1, varname2]) to add two or more file and array list in the DataFrame
+
+#LOAD A CSV, XLSX, JSON, HTML, SAS ETC.
+varname = pd.read_csv('filename.csv')
+varname = pd.read_html('html_link', match = "table_name"
+
+#TO CONCATINATE A TWO TABLE OR INCORPORATE THEM IN 1 TABLE
+pd.concat([varname],[varname2])
+
+varname.loc[0:10]
+
+to_string()
+add this function to print out all the rows of the DataFrame
+
+dropna()
+it drops or remove a rows with no values(NaN, Null)
+
+drop()
+
+head()
+get the first 5 row of a DataFrame
+
+tail()
+get the first inverted 5 row of a DataFrame
+
+info()
+to check info of the file(it will show no. of column x row, data type, etc.
+
+mean()
+median()
+mode()
+
+
+dropna(inplace = True)
+varname.dropna(subset=['column_name'], inplace = True)
+
+fillna()
+varname.fillna('value', inplace = True)
+varname['column_name'].fillna('value', inplace=True)
+
+varname['column_name'] = pd.to_datetime(varname['column_name'])
+
+varname.loc['value', 'column_name'] = 45
+
+df.loc[7, 'column_name] = value
+
+for loop to change values for larger set of data
+for x in df.index:
+  if varname.loc[x, "column_name"] > 120:
+    varname.loc[x, "column_name"] = 120
+
+removing rows for larger set of data
+for x in varname.index:
+  if varname.loc[x, "column_name"] > 120:
+    varname.drop(x, inplace = True) 
+
+
