@@ -1,0 +1,8 @@
+Pandas is a Python library used for working with data sets. it has functions for analyzing, cleaning, exploring, and manipulating data.
+
+*pip install pandas
+
+import pandas
+import pandas as pd
+
+pd.read_csv('path_to_directory_filename.csv')
