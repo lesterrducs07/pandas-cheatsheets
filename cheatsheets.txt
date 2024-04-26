@@ -1,8 +1,76 @@
-Pandas is a Python library used for working with data sets. it has functions for analyzing, cleaning, exploring, and manipulating data.
+PANDAS is a Python library used for working with data sets. it has functions for analyzing, cleaning, exploring, and manipulating data. pandas allows us to 
+  analyze big data and make conclusions based on statistical theories. it can clean messy data sets, and make them readable and relevant.
+  Relevant data is very important in data science.
 
-*pip install pandas
+*pip install pandas - to install in the terminal
+import pandas as pd - to use pandas library in your IDE
 
-import pandas
-import pandas as pd
+WHAT IS SERIES is like a column in a table. It is a one-dimensional array holding data of any type.
+pd.Series(varname, index="")
+pd.Series(varname[0])
+you can also use a key/value object, like a dictionary, when creating a Series. the key of dictionaries become the column labels
+pd.Series(varname, index '["label1", "label2"]
 
+INDEX is added in the function to make the row name change
+index=""
+COLUMNS is added in the function to make the column name change
+column=""
+
+DATAFRAMES datasets in Pandas are usually multi-dimensional tables, called DataFrames. if Series is like a column or row, 
+a DataFrame is the whole table(column and row)
+pd.DataFrame(varname)
+
+LOC attribute to return one or more specified row(s)
+varname.loc[0]
+varname.loc[[0,1]]
+
+IMPORTING A FILE IN PANDAS
 pd.read_csv('path_to_directory_filename.csv')
+pd.read_excel('path_to_directory_filename.xlsx') - you can load other type (sas, clipboard, html etc.)
+pd.read_html('link_of_the_html_or_website', mathch="")
+pd.read_json('jsonfile.json) -JSON objects have the same format as Python dictionaries.
+
+TO STRING you can use it to prin all the value in the DataFrame
+to_string()
+
+pd.options.display.max_rows - to check the max returned rows
+pd.options.display.max_rows = 9999
+
+HEAD method returns the headers and a specified number of rows, starting from the top
+head(10) - it will print the first 10 rows of the DataFrame
+
+TAIL method returns the headers and a specified number of rows, starting from the bottom
+tail() - return the last 5 rows
+
+INFO gives you more information about the data set
+info()
+
+DATA CLEANING fixing and removing bad data in the dataset(empty cells, data in wrong format, wrong data, duplicates,)
+
+DROPNA it will remove all rows in the DataFrame that contains NULL values
+dropna() method returns a new DataFrame, and will not change the original
+dropna(inplace= True) this method change the original DataFrame
+
+FILLNA will insert value in the empty cell instead of deleting. it will replace all the empty cells VALUE
+fillna(value, in place = True)
+
+FILLNA SPECIFIED COLUMN, indicate column_name name to fill the VALUE to replace
+varname["column_name"].fillna(value, inplace = True) 
+
+MEAN to calculate the average value(sum of all value divided by number of values)
+mean()
+
+MEDIAN the value in the middle, after you have sorted all values ascending
+median()
+
+MODE the value that appears the most in the table
+mode()
+
+
+
+
+
+
+
+
+
